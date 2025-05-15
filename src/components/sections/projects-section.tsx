@@ -14,6 +14,7 @@ const projectsData = [
     technologies: ["Python", "Backpropagation", "Computational Graphs"],
     link: "https://github.com/anubhab7111/micrograd.git",
     image: "/images/micrograd.png",
+    imageHint: "code visualization",
   },
   {
     title: "Football Analysis",
@@ -22,22 +23,16 @@ const projectsData = [
     technologies: ["YOLO", "KMeans Clustering", "Computer Vision", "Python"],
     link: "https://github.com/anubhab7111/Football-Analysis",
     image: "/images/Football-Analysis.png",
-  },
-  {
-    title: "Portfolio Website",
-    date: "July 2024",
-    description: "My personal academic portfolio website, designed to showcase my research, projects, and achievements. Built with modern web technologies for a clean, responsive, and accessible user experience.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
-    link: "https://github.com/anubhab7111/anubhab7111.github.io.git",
-    image: "/images/portfolio.png",
+    imageHint: "sports analytics",
   },
   {
     title: "CatppuccinRice",
     date: "September 2024",
-    description: "Created a Catppuccin-themed rice for my Arch Linux setup with Hyprland, Waybar, Kitty, Bash, and Neovim. Focused on a minimal, visually engaging environment that's modular, efficient, and distraction-free for enhanced productivity.",
+    description: "Created a Catppuccin-themed rice for my Arch Linux setup with Hyprland, Waybar, Kitty, Zsh, and Neovim. Focused on a minimal, visually engaging environment that's modular, efficient, and distraction-free for enhanced productivity.",
     technologies: ["Linux System Configuration", "Wayland Compositing (Hyprland)", "Scripting (Bash, Zsh)"],
     link: "https://github.com/anubhab7111/CatppuccinRice.git",
     image: "/images/CatppuccinRice.png",
+    imageHint: "desktop customization",
   },
 ];
 
@@ -62,6 +57,7 @@ export function ProjectsSection() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       style={{ objectFit: 'cover' }}
                       className="w-full h-full"
+                      data-ai-hint={project.imageHint}
                     />
                   </div>
                 )}
