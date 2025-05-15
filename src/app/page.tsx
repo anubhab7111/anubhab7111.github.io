@@ -37,8 +37,8 @@ export default function HomePage() {
     <>
       <div className="flex flex-col min-h-screen bg-background text-foreground selection:bg-primary/20 selection:text-foreground">
         {/* Top Navigation Bar */}
-        <header className="sticky top-0 z-40 w-full border-b border-border bg-card/90 backdrop-filter backdrop-blur-lg">
-          <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+        <header className="sticky top-0 z-40 w-full border-b border-border bg-card/90 backdrop-filter backdrop-blur-lg h-16">
+          <div className="container mx-auto flex h-full max-w-7xl items-center justify-between px-4">
             <Link href="/" className="flex items-center space-x-2">
               {/* Intentionally empty, name/logo handled in hero or mobile nav */}
             </Link>
@@ -92,27 +92,29 @@ export default function HomePage() {
         {/* Main Content Layout */}
         <div className="container mx-auto flex flex-1 max-w-7xl px-4">
           <div className="flex flex-col md:flex-row w-full">
-            {/* Left Terminal Hero Section */}
-            <TerminalHeroSection />
+            {/* Left Terminal Hero Section Column */}
+            <div className="w-full md:w-1/3 lg:w-1/4 md:sticky md:top-16 md:h-[calc(100vh-4rem)] py-8 md:py-12 md:pr-8 lg:pr-10 flex-shrink-0">
+              <TerminalHeroSection />
+            </div>
 
             {/* Main Scrollable Content Area */}
-            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-8 lg:pl-12 py-8 md:py-12 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[6rem] md:scroll-pt-[6rem]">
-              <section id="about" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-0 py-8 md:py-12 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[5rem] md:scroll-pt-[5rem]">
+              <section id="about" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <AboutSection />
               </section>
-              <section id="education" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+              <section id="education" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <EducationSection />
               </section>
-              <section id="projects" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+              <section id="projects" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <ProjectsSection />
               </section>
-              <section id="achievements" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+              <section id="achievements" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <AchievementsSection />
               </section>
-               <section id="extracurricular" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+               <section id="extracurricular" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <ExtracurricularSection />
               </section>
-              <section id="cv" className="scroll-mt-[7rem] md:scroll-mt-[7rem]">
+              <section id="cv" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <CvSection />
               </section>
             </main>

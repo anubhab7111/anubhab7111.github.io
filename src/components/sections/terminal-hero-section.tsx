@@ -82,7 +82,7 @@ export function TerminalHeroSection() {
   return (
     <div
       ref={containerRef}
-      className="w-full md:w-1/3 lg:w-1/4 md:sticky md:top-16 md:h-[calc(100vh-4rem)] py-8 md:py-6 pr-0 md:pr-8 lg:pr-10 flex-shrink-0 font-mono bg-card text-sm text-foreground/90 border border-border rounded-lg shadow-lg p-4 overflow-y-auto scrollbar-thin scrollbar-thumb-primary/40 scrollbar-track-card"
+      className="font-mono bg-card text-sm text-foreground/90 border border-border rounded-lg shadow-lg p-4 h-full overflow-y-auto scrollbar-thin scrollbar-thumb-primary/40 scrollbar-track-card"
       aria-label="Terminal-style hero section with contact information"
     >
       {displayedLines.map((line, index) => (
