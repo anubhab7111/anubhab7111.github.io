@@ -1,7 +1,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle, Linkedin, Github, Mail, Twitter, Home, Briefcase, Award, Bike, FileText, Palette } from 'lucide-react';
+import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle, Linkedin, Github, Mail, Twitter, Home, Briefcase, Award, Bike, FileText, Palette, Phone, MapPin } from 'lucide-react';
 
 import { AboutSection } from '@/components/sections/about-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
@@ -124,8 +124,8 @@ export default function HomePage() {
                 <Image
                   src="/images/anubhab.jpg" 
                   alt="Anubhab Das"
-                  width={150} 
-                  height={150}
+                  width={180} 
+                  height={180}
                   className="rounded-full object-cover shadow-xl border-2 border-primary/30"
                   data-ai-hint="professional headshot"
                   priority 
