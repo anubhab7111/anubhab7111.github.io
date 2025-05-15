@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle } from 'lucide-react';
+import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle, Linkedin, Github, Mail, Twitter } from 'lucide-react';
 
 import { AboutSection } from '@/components/sections/about-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
@@ -82,6 +82,31 @@ export default function HomePage() {
                         </SheetTrigger>
                       ))}
                     </nav>
+                    <div className="mt-8 pt-6 border-t border-border">
+                        <p className="text-sm font-medium text-primary mb-2">Connect</p>
+                        <div className="flex flex-col space-y-2">
+                            <Button variant="ghost" size="sm" asChild className="justify-start text-muted-foreground hover:text-primary">
+                                <a href="https://www.linkedin.com/in/anubhab-das-498155287/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                    <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+                                </a>
+                            </Button>
+                            <Button variant="ghost" size="sm" asChild className="justify-start text-muted-foreground hover:text-primary">
+                                <a href="https://github.com/anubhab7111" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                    <Github className="mr-2 h-4 w-4" /> GitHub
+                                </a>
+                            </Button>
+                             <Button variant="ghost" size="sm" asChild className="justify-start text-muted-foreground hover:text-primary">
+                                <a href="https://x.com/forreal_anubhab" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                    <Twitter className="mr-2 h-4 w-4" /> Twitter
+                                </a>
+                            </Button>
+                            <Button variant="ghost" size="sm" asChild className="justify-start text-muted-foreground hover:text-primary">
+                                <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center">
+                                    <Mail className="mr-2 h-4 w-4" /> Email
+                                </a>
+                            </Button>
+                        </div>
+                    </div>
                   </SheetContent>
                 </Sheet>
               </div>
@@ -98,7 +123,7 @@ export default function HomePage() {
             </div>
 
             {/* Main Scrollable Content Area */}
-            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-0 py-8 md:py-12 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[5rem] md:scroll-pt-[5rem]">
+            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-0 py-12 md:py-16 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[5rem] md:scroll-pt-[5rem]">
               <section id="about" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <AboutSection />
               </section>
