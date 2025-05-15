@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
-import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle, Linkedin, Github, Mail, Twitter } from 'lucide-react';
+import Image from 'next/image';
+import { BookOpen, Hammer, Trophy, ActivitySquare, Download, Menu, UserCircle, Linkedin, Github, Mail, Twitter, Home, Briefcase, Award, Bike, FileText, Palette } from 'lucide-react';
 
 import { AboutSection } from '@/components/sections/about-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
@@ -117,13 +118,26 @@ export default function HomePage() {
         {/* Main Content Layout */}
         <div className="container mx-auto flex flex-1 max-w-7xl px-4">
           <div className="flex flex-col md:flex-row w-full">
-            {/* Left Terminal Hero Section Column */}
-            <div className="w-full md:w-1/3 lg:w-1/4 md:sticky md:top-16 md:h-[calc(100vh-4rem)] py-8 md:py-12 md:pr-8 lg:pr-10 flex-shrink-0">
-              <TerminalHeroSection />
+            {/* Left Column with Image and Terminal Hero Section */}
+            <div className="w-full md:w-1/3 lg:w-1/4 md:sticky md:top-16 md:h-[calc(100vh-4rem)] py-8 md:py-12 md:pr-8 lg:pr-10 flex flex-col items-center flex-shrink-0">
+              <div className="mb-6">
+                <Image
+                  src="/images/anubhab.jpg" 
+                  alt="Anubhab Das"
+                  width={150} 
+                  height={150}
+                  className="rounded-full object-cover shadow-xl border-2 border-primary/30"
+                  data-ai-hint="professional headshot"
+                  priority 
+                />
+              </div>
+              <div className="w-full flex-grow"> {/* Ensure terminal takes remaining height */}
+                <TerminalHeroSection />
+              </div>
             </div>
 
             {/* Main Scrollable Content Area */}
-            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-0 py-12 md:py-16 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[5rem] md:scroll-pt-[5rem]">
+            <main className="w-full md:w-2/3 lg:w-3/4 md:pl-0 py-12 md:py-16 scroll-smooth space-y-16 md:space-y-24 scroll-pt-[5rem] md:scroll-mt-[5rem]">
               <section id="about" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <AboutSection />
               </section>
