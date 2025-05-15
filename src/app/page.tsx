@@ -21,12 +21,12 @@ import {
 
 
 const navItems = [
-  { name: 'About', href: '#about', Icon: UserCircle },
-  { name: 'Education', href: '#education', Icon: BookOpen },
-  { name: 'Projects', href: '#projects', Icon: Hammer },
-  { name: 'Achievements', href: '#achievements', Icon: Trophy },
-  { name: 'Activities', href: '#extracurricular', Icon: ActivitySquare },
-  { name: 'CV', href: '#cv', Icon: Download },
+  { name: 'About', href: '#about' },
+  { name: 'Education', href: '#education' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Achievements', href: '#achievements' },
+  { name: 'Activities', href: '#extracurricular' },
+  { name: 'CV', href: '#cv' },
 ];
 
 
@@ -75,7 +75,7 @@ export default function HomePage() {
                         <SheetTrigger asChild key={item.name}>
                           <Button variant="ghost" size="lg" asChild className="w-full justify-start text-base text-muted-foreground hover:text-primary hover:bg-accent/10 py-3">
                             <Link href={item.href} className="flex items-center">
-                              <item.Icon className="mr-2 h-4 w-4" />
+                              {/* Consider adding icons back if desired, e.g., <item.Icon className="mr-2 h-4 w-4" /> */}
                               {item.name}
                             </Link>
                           </Button>
@@ -130,32 +130,32 @@ export default function HomePage() {
                   priority 
                 />
               </div>
-              <div className="w-full flex-grow text-center md:text-left">
+              <div className="w-full flex-grow text-center"> {/* Removed md:text-left */}
                 <h1 className="text-2xl font-bold text-primary">Anubhab Das</h1>
                 <p className="text-md text-muted-foreground mb-6">Deep Learning Enthusiast</p>
                 
                 <div className="space-y-3 text-sm">
-                  <div className="flex items-center justify-center md:justify-start">
+                  <div className="flex items-center justify-center"> {/* Removed md:justify-start */}
                     <MapPin className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>Bhubaneswar, India</span>
                   </div>
-                  <a href="tel:+919937244767" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                  <a href="tel:+919937244767" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Phone className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>(+91) 9937244767</span>
                   </a>
-                  <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                  <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Mail className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>123ei0606@nitrkl.ac.in</span>
                   </a>
-                  <a href="https://github.com/anubhab7111" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                  <a href="https://github.com/anubhab7111" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Github className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>github.com/anubhab7111</span>
                   </a>
-                  <a href="https://www.linkedin.com/in/anubhab-das-498155287/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                  <a href="https://www.linkedin.com/in/anubhab-das-498155287/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Linkedin className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>linkedin.com/in/anubhab-das</span>
                   </a>
-                  <a href="https://x.com/forreal_anubhab" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                  <a href="https://x.com/forreal_anubhab" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Twitter className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>x.com/forreal_anubhab</span>
                   </a>
