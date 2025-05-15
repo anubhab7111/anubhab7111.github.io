@@ -38,32 +38,36 @@ export function TerminalHeroSection() {
 
   useEffect(() => {
     if (currentLineIndex < linesData.length) {
-      const currentLine = linesData[currentLineIndex];
-      if (currentCharIndex < currentLine.text.length) {
+      const currentLineData = linesData[currentLineIndex];
+      if (currentCharIndex < currentLineData.text.length) {
         const timeoutId = setTimeout(() => {
           setDisplayedLines(prev => {
             const newLines = [...prev];
             if (newLines[currentLineIndex]) {
-              newLines[currentLineIndex].typedText += currentLine.text[currentCharIndex];
+              // Ensure immutable update by creating a new object for the line
+              newLines[currentLineIndex] = {
+                ...newLines[currentLineIndex],
+                typedText: newLines[currentLineIndex].typedText + currentLineData.text[currentCharIndex],
+              };
             } else {
               newLines[currentLineIndex] = {
                 id: currentLineIndex,
-                fullText: currentLine.text,
-                typedText: currentLine.text[currentCharIndex],
-                isCommand: currentLine.isCommand,
-                href: currentLine.href,
-                Icon: currentLine.Icon,
-                target: currentLine.target,
+                fullText: currentLineData.text,
+                typedText: currentLineData.text[currentCharIndex],
+                isCommand: currentLineData.isCommand,
+                href: currentLineData.href,
+                Icon: currentLineData.Icon,
+                target: currentLineData.target,
               };
             }
             return newLines;
           });
           setCurrentCharIndex(prev => prev + 1);
-        }, currentLine.speed);
+        }, currentLineData.speed);
         return () => clearTimeout(timeoutId);
       } else {
         // Line finished typing, move to next line after a short pause
-        const delay = currentLine.isCommand ? 200 : 100;
+        const delay = currentLineData.isCommand ? 200 : 100;
         const timeoutId = setTimeout(() => {
           setCurrentLineIndex(prev => prev + 1);
           setCurrentCharIndex(0);
