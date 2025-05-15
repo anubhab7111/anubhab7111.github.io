@@ -18,7 +18,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { TerminalHeroSection } from '@/components/sections/terminal-hero-section';
 
 
 const navItems = [
@@ -118,7 +117,7 @@ export default function HomePage() {
         {/* Main Content Layout */}
         <div className="container mx-auto flex flex-1 max-w-7xl px-4">
           <div className="flex flex-col md:flex-row w-full">
-            {/* Left Column with Image and Terminal Hero Section */}
+            {/* Left Column with Image and Static Hero Info */}
             <div className="w-full md:w-1/3 lg:w-1/4 md:sticky md:top-16 md:h-[calc(100vh-4rem)] py-8 md:py-12 md:pr-8 lg:pr-10 flex flex-col items-center flex-shrink-0">
               <div className="mb-6">
                 <Image
@@ -131,8 +130,36 @@ export default function HomePage() {
                   priority 
                 />
               </div>
-              <div className="w-full flex-grow"> {/* Ensure terminal takes remaining height */}
-                <TerminalHeroSection />
+              <div className="w-full flex-grow text-center md:text-left">
+                <h1 className="text-2xl font-bold text-primary">Anubhab Das</h1>
+                <p className="text-md text-muted-foreground mb-6">Deep Learning Enthusiast</p>
+                
+                <div className="space-y-3 text-sm">
+                  <div className="flex items-center justify-center md:justify-start">
+                    <MapPin className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>Bhubaneswar, India</span>
+                  </div>
+                  <a href="tel:+919937244767" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                    <Phone className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>(+91) 9937244767</span>
+                  </a>
+                  <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                    <Mail className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>123ei0606@nitrkl.ac.in</span>
+                  </a>
+                  <a href="https://github.com/anubhab7111" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                    <Github className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>github.com/anubhab7111</span>
+                  </a>
+                  <a href="https://www.linkedin.com/in/anubhab-das-498155287/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                    <Linkedin className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>linkedin.com/in/anubhab-das</span>
+                  </a>
+                  <a href="https://x.com/forreal_anubhab" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center md:justify-start text-foreground hover:text-primary">
+                    <Twitter className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
+                    <span>x.com/forreal_anubhab</span>
+                  </a>
+                </div>
               </div>
             </div>
 
