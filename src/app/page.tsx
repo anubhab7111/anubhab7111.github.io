@@ -24,8 +24,8 @@ const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Education', href: '#education' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Achievements', href: '#achievements' },
-  { name: 'Activities', href: '#extracurricular' },
+  // { name: 'Achievements', href: '#achievements' },
+  // { name: 'Activities', href: '#extracurricular' },
   { name: 'CV', href: '#cv' },
 ];
 
@@ -68,7 +68,7 @@ export default function HomePage() {
                   <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-card">
                     <SheetHeader className="mb-6 mt-2">
                        <SheetTitle className="text-left text-lg font-semibold text-primary">Anubhab Das</SheetTitle>
-                       <p className="text-left text-xs text-muted-foreground">Deep Learning Enthusiast</p>
+                       <p className="text-left text-xs text-muted-foreground">Student at NIT Rourkela</p>
                     </SheetHeader>
                     <nav className="flex flex-col space-y-2">
                       {navItems.map((item) => (
@@ -132,7 +132,7 @@ export default function HomePage() {
               </div>
               <div className="w-full flex-grow text-center"> {/* Removed md:text-left */}
                 <h1 className="text-2xl font-bold text-primary">Anubhab Das</h1>
-                <p className="text-md text-muted-foreground mb-6">Deep Learning Enthusiast</p>
+                <p className="text-md text-muted-foreground mb-6">Student at NIT Rourkela</p>
                 
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center justify-center"> {/* Removed md:justify-start */}
@@ -174,12 +174,12 @@ export default function HomePage() {
               <section id="projects" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <ProjectsSection />
               </section>
-              <section id="achievements" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
+              {/* <section id="achievements" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <AchievementsSection />
-              </section>
-               <section id="extracurricular" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
+              </section> */}
+               {/* <section id="extracurricular" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <ExtracurricularSection />
-              </section>
+              </section> */}
               <section id="cv" className="scroll-mt-[5rem] md:scroll-mt-[5rem]">
                 <CvSection />
               </section>

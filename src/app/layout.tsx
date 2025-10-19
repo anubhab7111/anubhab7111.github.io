@@ -79,7 +79,7 @@ export default function RootLayout({
     "name": "Anubhab Das",
     "url": siteUrl,
     "image": profileImageUrl, // Schema.org can still use an image if desired
-    "jobTitle": "Deep Learning Enthusiast",
+    "jobTitle": "Student at NIT Rourkela",
     "worksFor": {
       "@type": "Organization",
       "name": "National Institute of Technology, Rourkela"

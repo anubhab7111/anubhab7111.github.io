@@ -1,4 +1,3 @@
-
 import { BookOpen, CalendarDays, MapPin } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,9 +7,15 @@ const educationData = [
   {
     institution: "National Institute of Technology, Rourkela",
     degree: "Bachelor of Technology in Electronics and Instrumentation Engineering",
-    duration: "September 2023 – Present",
+    duration: "September 2023 – Present(Expected: 2027)",
     location: "Rourkela, Odisha",
-    details: [],
+    details: [
+      "Relevant Coursework:",
+      "Probability and Statistics (MA2001)",
+      "Introduction to AI and ML (CS2011)",
+      "Neural Networks and Deep Learning (EC3608)",
+      "Digital Signal Processing (EC3601)",
+    ],
   },
   {
     institution: "ODM Public School",
@@ -55,13 +60,24 @@ export function EducationSection() {
                     <MapPin className="mr-2 h-4 w-4 text-accent" />
                     <span>{edu.location}</span>
                   </div>
+
                   {edu.details && edu.details.length > 0 && (
                     <div className="pt-2">
-                      {edu.details.map((detail) => (
-                        <Badge key={detail} variant="secondary" className="text-xs bg-accent/10 text-accent hover:bg-accent/20 mr-1 mb-1">
-                          {detail}
-                        </Badge>
-                      ))}
+                      {edu.details.map((detail, i) =>
+                        detail.startsWith("Relevant Coursework") ? (
+                          <p key={i} className="font-semibold text-sm text-primary mt-2 mb-1">
+                            {detail}
+                          </p>
+                        ) : (
+                          <Badge
+                            key={detail}
+                            variant="secondary"
+                            className="text-xs bg-accent/10 text-accent hover:bg-accent/20 mr-1 mb-1"
+                          >
+                            {detail}
+                          </Badge>
+                        )
+                      )}
                     </div>
                   )}
                 </CardContent>

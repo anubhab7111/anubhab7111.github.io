@@ -16,7 +16,7 @@ const linesData = [
   { text: '$ social --github', isCommand: true, speed: 50 },
   { text: '> github.com/anubhab7111', isCommand: false, speed: 50, href: 'https://github.com/anubhab7111', Icon: Github, target: '_blank' },
   { text: '$ social --linkedin', isCommand: true, speed: 50 },
-  { text: '> linkedin.com/in/anubhab-das', isCommand: false, speed: 50, href: 'https://www.linkedin.com/in/anubhab-das-498155287/', Icon: Linkedin, target: '_blank' },
+  { text: '> linkedin.com/in/anubhab-das-498155287', isCommand: false, speed: 50, href: 'https://www.linkedin.com/in/anubhab-das-498155287/', Icon: Linkedin, target: '_blank' },
   { text: '$ social --twitter', isCommand: true, speed: 50 },
   { text: '> x.com/forreal_anubhab', isCommand: false, speed: 50, href: 'https://x.com/forreal_anubhab', Icon: Twitter, target: '_blank' },
   { text: '$ exit', isCommand: true, speed: 50 },

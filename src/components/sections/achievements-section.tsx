@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 
 const achievementsData = [
   {
-    title: "4th Position in AlgoBlitz",
+    title: "3rd Runner Up Position in AlgoBlitz",
     description: "A competitive programming contest conducted by NIT Rourkela.",
     year: "2025",
     issuer: "NIT Rourkela",
@@ -21,14 +21,14 @@ const achievementsData = [
     certificate: true,
     certificateLink: "https://drive.google.com/file/d/1sLUqbgcfYirGYaDgls6ai0g6_OKFtWJf/view?usp=sharing",
   },
-  {
-    title: "AIR 13676 in JEE Advanced",
-    description: "Joint Entrance Examination (Advanced).",
-    year: "2023",
-    issuer: "IITs",
-    certificate: true,
-    certificateLink: "https://drive.google.com/file/d/1xAzO6KY4kiuZMnmt0BCs5LTOF2ApJx1D/view?usp=sharing",
-  },
+  // {
+  //   title: "AIR 13676 in JEE Advanced",
+  //   description: "Joint Entrance Examination (Advanced).",
+  //   year: "2023",
+  //   issuer: "IITs",
+  //   certificate: true,
+  //   certificateLink: "https://drive.google.com/file/d/1xAzO6KY4kiuZMnmt0BCs5LTOF2ApJx1D/view?usp=sharing",
+  // },
   {
     title: "Top 1% AIR in JEE Mains",
     description: "Joint Entrance Examination (Mains), among 11.6 Lakh candidates.",

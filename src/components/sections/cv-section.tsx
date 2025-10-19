@@ -13,7 +13,7 @@ export function CvSection() {
             Download my CV for a comprehensive overview of my qualifications, projects, and experience.
           </p>
           <Button asChild size="lg" className="shadow-md hover:shadow-lg transition-shadow">
-            <a href="https://drive.google.com/file/d/1Xjo_c67G800u1_Ct0g69a9UG4OtzfRct/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1OHxBxrKI8QgwMwNrKml6WP-0CMBihFaQ/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-5 w-5" />
               Download CV (PDF)
             </a>
