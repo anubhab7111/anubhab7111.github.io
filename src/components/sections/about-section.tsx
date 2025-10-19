@@ -1,6 +1,6 @@
 
-import { FadeIn } from '@/components/utility/fade-in';
 import { UserCircle } from 'lucide-react';
+import { FadeIn } from '@/components/utility/fade-in';
 
 export function AboutSection() {
   return (
