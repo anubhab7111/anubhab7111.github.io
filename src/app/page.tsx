@@ -101,7 +101,7 @@ export default function HomePage() {
                                 </a>
                             </Button>
                             <Button variant="ghost" size="sm" asChild className="justify-start text-muted-foreground hover:text-primary">
-                                <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center">
+                                <a href="mailto:anubhabdas7111@gmail.com" className="flex items-center">
                                     <Mail className="mr-2 h-4 w-4" /> Email
                                 </a>
                             </Button>
@@ -143,9 +143,9 @@ export default function HomePage() {
                     <Phone className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
                     <span>(+91) 9937244767</span>
                   </a>
-                  <a href="mailto:123ei0606@nitrkl.ac.in" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
+                  <a href="mailto:anubhabdas7111@gmail.com" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Mail className="mr-2 h-4 w-4 text-accent flex-shrink-0" />
-                    <span>123ei0606@nitrkl.ac.in</span>
+                    <span>anubhabdas7111@gmail.com</span>
                   </a>
                   <a href="https://github.com/anubhab7111" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center text-foreground hover:text-primary"> {/* Removed md:justify-start */}
                     <Github className="mr-2 h-4 w-4 text-accent flex-shrink-0" />

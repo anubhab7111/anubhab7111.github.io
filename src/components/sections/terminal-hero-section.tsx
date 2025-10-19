@@ -12,7 +12,7 @@ const linesData = [
   { text: '$ contact --phone', isCommand: true, speed: 50 },
   { text: '> (+91) 9937244767', isCommand: false, speed: 50, href: 'tel:+919937244767', Icon: Phone },
   { text: '$ contact --email', isCommand: true, speed: 50 },
-  { text: '> 123ei0606@nitrkl.ac.in', isCommand: false, speed: 50, href: 'mailto:123ei0606@nitrkl.ac.in', Icon: Mail },
+  { text: '> anubhabdas7111@gmail.com', isCommand: false, speed: 50, href: 'mailto:anubhabdas7111@gmail.com', Icon: Mail },
   { text: '$ social --github', isCommand: true, speed: 50 },
   { text: '> github.com/anubhab7111', isCommand: false, speed: 50, href: 'https://github.com/anubhab7111', Icon: Github, target: '_blank' },
   { text: '$ social --linkedin', isCommand: true, speed: 50 },
