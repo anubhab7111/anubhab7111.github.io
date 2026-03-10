@@ -1,71 +1,71 @@
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans";
 
-import type { Metadata } from 'next';
-import { GeistSans } from 'geist/font/sans';
-import './globals.css';
+import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import { ThemeProvider } from '@/components/theme-provider';
+import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = GeistSans;
 
-const siteUrl = 'https://anubhab7111.github.io/';
+const siteUrl = "https://anubhab7111.github.io/";
 const profileImageUrl = `${siteUrl}images/anubhab.jpg`; // This will be used for schema.org but not for openGraph/twitter
 
 export const metadata: Metadata = {
-  title: 'Anubhab Das',
+  title: "Anubhab Das",
   keywords: [
-    'Anubhab Das',
-    'Portfolio',
-    'Deep Learning',
-    'Computer Vision',
-    'Machine Learning',
-    'AI',
-    'Artificial Intelligence',
-    'Researcher',
-    'Undergraduate',
-    'NIT Rourkela',
-    'Python',
-    'PyTorch',
-    'Next.js Developer',
-    'Software Developer',
-    'Tech Portfolio',
-    'Personal Showcase',
+    "Anubhab Das",
+    "Portfolio",
+    "Deep Learning",
+    "Computer Vision",
+    "Machine Learning",
+    "AI",
+    "Artificial Intelligence",
+    "Researcher",
+    "Undergraduate",
+    "NIT Rourkela",
+    "Python",
+    "PyTorch",
+    "Next.js Developer",
+    "Software Developer",
+    "Tech Portfolio",
+    "Personal Showcase",
   ],
-  authors: [{ name: 'Anubhab Das', url: siteUrl }],
-  creator: 'Anubhab Das',
-  publisher: 'Anubhab Das',
+  authors: [{ name: "Anubhab Das", url: siteUrl }],
+  creator: "Anubhab Das",
+  publisher: "Anubhab Das",
 
   openGraph: {
-    title: 'Anubhab Das',
+    title: "Anubhab Das",
     url: siteUrl,
-    siteName: 'Anubhab Das',
-    locale: 'en_US',
-    type: 'website',
+    siteName: "Anubhab Das",
+    locale: "en_US",
+    type: "website",
   },
   twitter: {
-    card: 'summary',
-    title: 'Anubhab Das',
-    creator: '@forreal_anubhab',
+    card: "summary",
+    title: "Anubhab Das",
+    creator: "@forreal_anubhab",
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false, 
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
       noimageindex: false,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   alternates: {
     canonical: siteUrl,
   },
-  icons: { 
-    icon: '/favicon.ico', 
+  icons: {
+    icon: "/favicon.ico",
   },
-  manifest: '/manifest.json',
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
@@ -76,35 +76,56 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Anubhab Das",
-    "url": siteUrl,
-    "image": profileImageUrl, // Schema.org can still use an image if desired
-    "jobTitle": "Student at NIT Rourkela",
-    "worksFor": {
+    name: "Anubhab Das",
+    url: siteUrl,
+    image: profileImageUrl, // Schema.org can still use an image if desired
+    jobTitle: "Student at NIT Rourkela",
+    worksFor: {
       "@type": "Organization",
-      "name": "National Institute of Technology, Rourkela"
+      name: "National Institute of Technology, Rourkela",
     },
-    "alumniOf": {
+    alumniOf: {
       "@type": "CollegeOrUniversity",
-      "name": "National Institute of Technology, Rourkela"
+      name: "National Institute of Technology, Rourkela",
     },
-    "sameAs": [
+    sameAs: [
       "https://www.linkedin.com/in/anubhab-das-498155287/",
       "https://github.com/anubhab7111",
-      "https://x.com/forreal_anubhab"
+      "https://x.com/forreal_anubhab",
     ],
-    "knowsAbout": ["Deep Learning", "Computer Vision", "Machine Learning", "Artificial Intelligence", "Python", "PyTorch", "Next.js", "Web Development"]
+    knowsAbout: [
+      "Deep Learning",
+      "Computer Vision",
+      "Machine Learning",
+      "Artificial Intelligence",
+      "Python",
+      "PyTorch",
+      "Next.js",
+      "Web Development",
+    ],
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+          rel="stylesheet"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${geistSans.variable} font-sans antialiased bg-background text-foreground`}>
+      <body
+        className={`${geistSans.variable} font-sans antialiased bg-background text-foreground`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
