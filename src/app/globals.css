@@ -5,72 +5,95 @@
 @layer base {
     :root {
         --font-serif: "Playfair Display";
-        /* Light mode — true white/black with teal + coral accents */
         --background: 0 0% 100%;
         --foreground: 0 0% 5%;
+
         --card: 0 0% 100%;
         --card-foreground: 0 0% 5%;
+
         --popover: 0 0% 100%;
         --popover-foreground: 0 0% 5%;
-        --primary: 180 100% 25%; /* Teal */
+
+        /* Primary — Deep Teal */
+        --primary: 180 100% 25%;
         --primary-foreground: 0 0% 100%;
+
         --secondary: 0 0% 95%;
         --secondary-foreground: 0 0% 10%;
+
         --muted: 0 0% 95%;
         --muted-foreground: 0 0% 38%;
-        --accent: 16 85% 55%; /* Coral, complements teal */
+
+        --accent: 40 35% 52%;
         --accent-foreground: 0 0% 100%;
+
         --destructive: 0 84% 50%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 5%; /* True black rule lines, letterpress feel */
+
+        --border: 0 0% 5%;
         --input: 0 0% 78%;
+
         --ring: 180 100% 25%;
+
         --chart-1: 180 100% 25%;
-        --chart-2: 16 85% 55%;
+        --chart-2: 40 35% 52%;
         --chart-3: 220 60% 45%;
-        --chart-4: 45 90% 50%;
-        --chart-5: 140 45% 35%;
+        --chart-4: 45 60% 45%;
+        --chart-5: 140 35% 35%;
+
         --radius: 0.25rem;
+
         --sidebar-background: 0 0% 96%;
         --sidebar-foreground: 0 0% 10%;
         --sidebar-primary: 180 100% 25%;
         --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 16 85% 55%;
+        --sidebar-accent: 40 35% 52%;
         --sidebar-accent-foreground: 0 0% 100%;
         --sidebar-border: 0 0% 5%;
         --sidebar-ring: 180 100% 25%;
     }
+
     .dark {
-        /* Dark mode — true near-black/white with teal + coral accents */
         --background: 0 0% 4%;
         --foreground: 0 0% 98%;
+
         --card: 0 0% 8%;
         --card-foreground: 0 0% 98%;
+
         --popover: 0 0% 7%;
         --popover-foreground: 0 0% 98%;
-        --primary: 178 80% 45%; /* Bright teal for dark contrast */
+
+        --primary: 178 80% 45%;
         --primary-foreground: 0 0% 5%;
+
         --secondary: 0 0% 14%;
         --secondary-foreground: 0 0% 92%;
+
         --muted: 0 0% 14%;
         --muted-foreground: 0 0% 62%;
-        --accent: 16 90% 60%; /* Coral, complements teal */
+
+        --accent: 42 55% 62%;
         --accent-foreground: 0 0% 5%;
+
         --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 88%; /* Near-white rule lines for brutalist edges on black */
+
+        --border: 0 0% 88%;
         --input: 0 0% 30%;
+
         --ring: 178 80% 45%;
+
         --chart-1: 178 80% 45%;
-        --chart-2: 16 90% 60%;
+        --chart-2: 42 55% 62%;
         --chart-3: 220 70% 60%;
-        --chart-4: 45 90% 58%;
+        --chart-4: 45 70% 58%;
         --chart-5: 140 50% 48%;
+
         --sidebar-background: 0 0% 6%;
         --sidebar-foreground: 0 0% 92%;
         --sidebar-primary: 178 80% 45%;
         --sidebar-primary-foreground: 0 0% 5%;
-        --sidebar-accent: 16 90% 60%;
+        --sidebar-accent: 42 55% 62%;
         --sidebar-accent-foreground: 0 0% 5%;
         --sidebar-border: 0 0% 88%;
         --sidebar-ring: 178 80% 45%;
@@ -81,8 +104,14 @@
     * {
         @apply border-border;
     }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         @apply bg-background text-foreground;
+
         font-feature-settings:
             "kern" 1,
             "liga" 1,
@@ -90,10 +119,15 @@
             "pnum" 1,
             "tnum" 0,
             "onum" 1;
+
         text-rendering: optimizeLegibility;
+
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-image: linear-gradient(
+
+        /* Subtle editorial grid */
+        background-image:
+            linear-gradient(
                 hsl(var(--foreground) / 0.05) 1px,
                 transparent 1px
             ),
@@ -102,10 +136,10 @@
                 hsl(var(--foreground) / 0.05) 1px,
                 transparent 1px
             );
+
         background-size: 40px 40px;
     }
 
-    /* Heading defaults — tight tracking and comfortable leading */
     h1,
     h2,
     h3,
@@ -113,29 +147,33 @@
     h5,
     h6 {
         @apply tracking-tight;
+
         line-height: 1.2;
+
         font-feature-settings:
             "kern" 1,
             "liga" 1,
             "dlig" 1;
     }
 
-    /* Body prose — generous line-height for readability */
+    h1,
+    h2 {
+        font-family: var(--font-serif), serif;
+    }
+
     p {
         @apply leading-7;
     }
 
-    /* Smooth, accessible link transitions */
+
     a {
         @apply transition-colors duration-150 ease-in-out;
     }
 
-    /* Refined text selection */
     ::selection {
         @apply bg-primary/20 text-foreground;
     }
 
-    /* Numeric tabular figures for metadata / dates */
     time,
     .tabular-nums {
         font-feature-settings:
@@ -145,34 +183,150 @@
 }
 
 @layer utilities {
-    /* Neo-brutalist hard (unblurred) offset shadows */
     .shadow-brutal {
         box-shadow: 6px 6px 0 0 hsl(var(--foreground));
     }
+
     .shadow-brutal-sm {
         box-shadow: 3px 3px 0 0 hsl(var(--foreground));
     }
+
     .shadow-brutal-primary {
         box-shadow: 6px 6px 0 0 hsl(var(--primary));
     }
+
+    .shadow-brutal-teal {
+        box-shadow: 5px 5px 0 0 hsl(var(--primary));
+    }
+
+    /* Brass shadow — use selectively */
     .shadow-brutal-accent {
         box-shadow: 6px 6px 0 0 hsl(var(--accent));
     }
+
+    .shadow-brutal-brass {
+        box-shadow: 5px 5px 0 0 hsl(var(--accent));
+    }
+
     .shadow-brutal-none {
         box-shadow: 0 0 0 0 hsl(var(--foreground));
     }
 
-    /* Pressable brutalist interaction: shadow collapses as the element "pushes in" */
+    .text-brass {
+        color: hsl(var(--accent));
+    }
+
+    .border-brass {
+        border-color: hsl(var(--accent));
+    }
+
+    .bg-brass {
+        background-color: hsl(var(--accent));
+    }
+
+    .text-teal {
+        color: hsl(var(--primary));
+    }
+
+    .border-teal {
+        border-color: hsl(var(--primary));
+    }
+
+    .bg-teal {
+        background-color: hsl(var(--primary));
+    }
+
+    /*
+     * Editorial brass rule.
+     */
+    .rule-brass {
+        height: 2px;
+        background-color: hsl(var(--accent));
+    }
+
+    /*
+     * Small uppercase editorial label.
+     */
+    .label-editorial {
+        @apply text-xs font-semibold uppercase tracking-[0.18em];
+
+        color: hsl(var(--accent));
+    }
+
+    .section-number {
+        @apply font-mono text-sm font-semibold;
+
+        color: hsl(var(--accent));
+        font-feature-settings:
+            "tnum" 1,
+            "lnum" 1;
+    }
+
     .press-brutal {
         transition:
             transform 150ms ease,
             box-shadow 150ms ease;
     }
+
     .press-brutal:hover {
         transform: translate(-2px, -2px);
     }
+
     .press-brutal:active {
         transform: translate(0, 0);
-        box-shadow: 0 0 0 0 hsl(var(--foreground)) !important;
+
+        box-shadow:
+            0 0 0 0 hsl(var(--foreground)) !important;
+    }
+
+
+    .press-brass {
+        transition:
+            transform 150ms ease,
+            box-shadow 150ms ease;
+    }
+
+    .press-brass:hover {
+        transform: translate(-2px, -2px);
+
+        box-shadow:
+            5px 5px 0 0 hsl(var(--accent));
+    }
+
+    .press-brass:active {
+        transform: translate(0, 0);
+
+        box-shadow:
+            0 0 0 0 hsl(var(--accent));
+    }
+
+    .accent-bar {
+        border-left: 3px solid hsl(var(--accent));
+    }
+
+    .underline-brass {
+        text-decoration-line: underline;
+        text-decoration-color: hsl(var(--accent));
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+    }
+
+    .teal-brass {
+        border-color: hsl(var(--primary));
+        box-shadow: 4px 4px 0 0 hsl(var(--accent));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+        }
     }
 }

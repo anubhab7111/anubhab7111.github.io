@@ -46,14 +46,9 @@ export function EducationSection() {
       <div className="space-y-8">
         <div className="mb-8 flex items-center gap-3">
           <BookOpen className="h-7 w-7 flex-shrink-0 text-accent" />
-          <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              // 02
-            </p>
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-              Education
-            </h2>
-          </div>
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+            Education
+          </h2>
         </div>
         <div className="space-y-5">
           {educationData.map((edu, index) => (

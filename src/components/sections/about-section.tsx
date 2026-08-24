@@ -7,14 +7,9 @@ export function AboutSection() {
       <div className="space-y-8">
         <div className="mb-6 flex items-center gap-3">
           <UserCircle className="h-8 w-8 flex-shrink-0 text-accent" />
-          <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              // 01
-            </p>
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-              About
-            </h2>
-          </div>
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+            About
+          </h2>
         </div>
         <div
           className="space-y-5 text-foreground/80 leading-7 text-base max-w-prose text-justify hyphens-auto"

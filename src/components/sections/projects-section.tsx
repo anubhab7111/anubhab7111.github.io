@@ -74,26 +74,32 @@ export function ProjectsSection() {
       <div className="space-y-8">
         <div className="mb-8 flex items-center gap-3">
           <Hammer className="h-7 w-7 flex-shrink-0 text-accent" />
-          <div>
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">
-              // 03
-            </p>
-            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-              Projects
-            </h2>
-          </div>
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+            Projects
+          </h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {projectsData.map((project, index) => (
-            <FadeIn delay={`delay-${index * 100}ms`} key={project.title}>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {projectsData.map((project, index) => {
+            const isTrailingOdd =
+              index === projectsData.length - 1 && projectsData.length % 2 !== 0;
+            return (
+            <FadeIn
+              delay={`delay-${index * 100}ms`}
+              key={project.title}
+              className={isTrailingOdd ? "md:col-span-2" : undefined}
+            >
               <Card className="flex h-full flex-col overflow-hidden bg-secondary/40 transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal-accent">
                 {project.image && (
-                  <div className="relative h-48 w-full border-b-2 border-foreground">
+                  <div
+                    className={`relative w-full border-b-2 border-foreground ${
+                      isTrailingOdd ? "h-64" : "h-48"
+                    }`}
+                  >
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       style={{ objectFit: "cover" }}
                       className="w-full h-full"
                       data-ai-hint={project.imageHint}
@@ -149,7 +155,8 @@ export function ProjectsSection() {
                 </CardFooter>
               </Card>
             </FadeIn>
-          ))}
+            );
+          })}
         </div>
       </div>
     </FadeIn>

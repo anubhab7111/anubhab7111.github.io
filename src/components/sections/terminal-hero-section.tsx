@@ -84,7 +84,7 @@ function Terminal() {
   }, [displayedLines]);
 
   return (
-    <div className="flex h-full flex-col rounded-md border-2 border-foreground bg-card shadow-brutal-primary">
+    <div className="flex h-full w-full max-w-2xl flex-col rounded-md border-2 border-foreground bg-card shadow-brutal-primary">
       {/* Fake title bar */}
       <div className="flex items-center gap-2 border-b-2 border-foreground bg-secondary px-4 py-2.5">
         <span className="h-3 w-3 rounded-full border border-foreground bg-destructive" />
@@ -96,7 +96,7 @@ function Terminal() {
       </div>
       <div
         ref={containerRef}
-        className="scrollbar-thin scrollbar-thumb-primary/40 scrollbar-track-card h-full min-h-[320px] flex-1 overflow-y-auto p-4 font-mono text-sm text-foreground/90"
+        className="scrollbar-thin scrollbar-thumb-primary/40 scrollbar-track-card h-[320px] flex-1 overflow-y-auto p-4 font-mono text-sm text-foreground/90"
         aria-label="Terminal-style hero section with contact information"
       >
         {displayedLines.map((line, index) => (
@@ -109,7 +109,7 @@ function Terminal() {
                 href={line.href}
                 target={line.target || '_self'}
                 rel={line.target === '_blank' ? 'noopener noreferrer' : undefined}
-                className={line.isCommand ? 'text-primary' : 'text-foreground/90 transition-colors hover:text-accent hover:underline'}
+                className={line.isCommand ? 'text-primary' : 'text-foreground/90'}
               >
                 <span>{line.typedText}</span>
               </a>
@@ -134,40 +134,24 @@ function Terminal() {
 
 export function TerminalHeroSection() {
   return (
-    <div className="grid gap-6 md:grid-cols-5">
-      {/* Identity block */}
-      <div className="flex flex-col gap-6 md:col-span-2">
-        <div className="relative w-fit self-center rounded-md border-2 border-foreground shadow-brutal-accent md:self-start">
+    <div className="grid gap-6 md:grid-cols-[320px_1fr]">
+      {/* Photo */}
+      <div className="flex items-center justify-center md:justify-start">
+        <div className="relative w-full rounded-md border-2 border-foreground shadow-brutal-accent md:w-[320px]">
           <Image
             src="/images/anubhab.jpg"
             alt="Anubhab Das"
-            width={180}
-            height={180}
-            className="h-[180px] w-[180px] rounded-[2px] object-cover"
+            width={320}
+            height={320}
+            className="h-[320px] w-full rounded-[2px] object-cover md:w-[320px]"
             data-ai-hint="professional headshot"
             priority
           />
         </div>
-        <div className="flex flex-1 flex-col rounded-md border-2 border-foreground bg-card p-6 shadow-brutal">
-          <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
-            // hello world
-          </p>
-          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-foreground">
-            Anubhab Das
-          </h1>
-          <div className="mt-3 h-1 w-14 bg-primary" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-muted-foreground">
-            Student at NIT Rourkela — Deep Learning &amp; Computer Vision
-          </p>
-          <div className="mt-4 flex items-center gap-2 font-mono text-xs text-foreground/80">
-            <MapPin className="h-3.5 w-3.5 flex-shrink-0 text-accent" />
-            <span>Bhubaneswar, India</span>
-          </div>
-        </div>
       </div>
 
-      {/* Terminal block */}
-      <div className="md:col-span-3">
+      {/* Terminal */}
+      <div className="flex">
         <Terminal />
       </div>
     </div>

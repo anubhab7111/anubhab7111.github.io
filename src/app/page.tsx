@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Menu, Linkedin, Github, Mail, Twitter } from "lucide-react";
+import { Menu, Linkedin, Github, Mail, Twitter, Download } from "lucide-react";
 
 import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
-import { CvSection } from "@/components/sections/cv-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { Button } from "@/components/ui/button";
 import { EducationSection } from "@/components/sections/education-section";
@@ -19,10 +18,9 @@ import {
 
 const navItems = [
   { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
+  { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "CV", href: "#cv" },
 ];
 
 export default function HomePage() {
@@ -177,6 +175,27 @@ export default function HomePage() {
           <TerminalHeroSection />
         </section>
 
+        {/* About & Education Grid */}
+        <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2">
+          <section
+            id="about"
+            className="scroll-mt-24"
+          >
+            <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+              <AboutSection />
+            </div>
+          </section>
+
+          <section
+            id="education"
+            className="scroll-mt-24"
+          >
+            <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
+              <EducationSection />
+            </div>
+          </section>
+        </div>
+
         {/* Experience Section */}
         <section
           id="experience"
@@ -187,41 +206,37 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Bento grid of sections */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:auto-rows-min">
-          <section
-            id="about"
-            className="scroll-mt-24 md:col-span-2"
-          >
-            <div className="h-full rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
-              <AboutSection />
-            </div>
-          </section>
+        {/* Projects Section */}
+        <section
+          id="projects"
+          className="scroll-mt-24"
+        >
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+            <ProjectsSection />
+          </div>
+        </section>
 
-          <section
-            id="education"
-            className="scroll-mt-24 md:col-span-1 md:row-span-2"
-          >
-            <div className="h-full rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
-              <EducationSection />
-            </div>
-          </section>
-
-          <section id="cv" className="scroll-mt-24 md:col-span-2">
-            <div className="h-full rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
-              <CvSection />
-            </div>
-          </section>
-
-          <section
-            id="projects"
-            className="scroll-mt-24 md:col-span-3"
-          >
-            <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-primary sm:p-8">
-              <ProjectsSection />
-            </div>
-          </section>
-        </div>
+        {/* CV Download Button */}
+        <section className="scroll-mt-24">
+          <div className="flex flex-col items-start gap-4 rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+            <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
+              Download my CV
+            </h3>
+            <Button asChild size="lg" className="shadow-brutal">
+              <a
+                href="https://drive.google.com/file/d/1OHxBxrKI8QgwMwNrKml6WP-0CMBihFaQ/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download CV (PDF)
+              </a>
+            </Button>
+            <p className="font-mono text-xs tracking-wide text-muted-foreground">
+              Hosted on Google Drive — click to view or download.
+            </p>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
