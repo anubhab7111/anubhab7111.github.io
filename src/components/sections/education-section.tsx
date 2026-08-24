@@ -44,29 +44,36 @@ export function EducationSection() {
   return (
     <FadeIn>
       <div className="space-y-8">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8 flex items-center gap-3 tracking-tight">
-          <BookOpen className="h-7 w-7 flex-shrink-0" />
-          Education
-        </h2>
+        <div className="mb-8 flex items-center gap-3">
+          <BookOpen className="h-7 w-7 flex-shrink-0 text-accent" />
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">
+              // 02
+            </p>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+              Education
+            </h2>
+          </div>
+        </div>
         <div className="space-y-5">
           {educationData.map((edu, index) => (
             <FadeIn delay={`delay-${index * 100}`} key={edu.institution}>
-              <Card className="overflow-hidden transition-all hover:shadow-lg">
+              <Card className="overflow-hidden bg-secondary/40 shadow-brutal-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg font-serif font-semibold text-primary/90 tracking-tight leading-snug">
+                  <CardTitle className="text-lg font-serif font-semibold tracking-tight leading-snug text-primary">
                     {edu.institution}
                   </CardTitle>
-                  <CardDescription className="text-sm text-foreground/70 font-medium mt-0.5">
+                  <CardDescription className="mt-0.5 text-sm font-medium text-foreground/70">
                     {edu.degree}
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2 pt-0">
-                  <div className="flex items-center text-xs text-muted-foreground tabular-nums">
-                    <CalendarDays className="mr-2 h-3.5 w-3.5 text-accent flex-shrink-0" />
+                  <div className="flex items-center font-mono text-xs text-muted-foreground tabular-nums">
+                    <CalendarDays className="mr-2 h-3.5 w-3.5 flex-shrink-0 text-accent" />
                     <span>{edu.duration}</span>
                   </div>
-                  <div className="flex items-center text-xs text-muted-foreground">
-                    <MapPin className="mr-2 h-3.5 w-3.5 text-accent flex-shrink-0" />
+                  <div className="flex items-center font-mono text-xs text-muted-foreground">
+                    <MapPin className="mr-2 h-3.5 w-3.5 flex-shrink-0 text-accent" />
                     <span>{edu.location}</span>
                   </div>
 
@@ -76,15 +83,15 @@ export function EducationSection() {
                         detail.startsWith("Relevant Coursework") ? (
                           <p
                             key={i}
-                            className="font-semibold text-xs uppercase tracking-widest text-primary/70 mt-2 mb-2"
+                            className="mb-2 mt-2 font-mono text-xs font-bold uppercase tracking-widest text-primary"
                           >
                             {detail}
                           </p>
                         ) : (
                           <Badge
                             key={detail}
-                            variant="secondary"
-                            className="text-xs bg-accent/10 text-accent hover:bg-accent/20 mr-1 mb-1.5 font-normal"
+                            variant="outline"
+                            className="mb-1.5 mr-1 border-accent text-accent"
                           >
                             {detail}
                           </Badge>

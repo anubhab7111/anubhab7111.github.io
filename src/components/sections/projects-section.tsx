@@ -52,16 +52,23 @@ export function ProjectsSection() {
   return (
     <FadeIn>
       <div className="space-y-8">
-        <h2 className="text-3xl font-serif font-bold text-primary mb-8 flex items-center gap-3 tracking-tight">
-          <Hammer className="h-7 w-7 flex-shrink-0" />
-          Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mb-8 flex items-center gap-3">
+          <Hammer className="h-7 w-7 flex-shrink-0 text-accent" />
+          <div>
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">
+              // 03
+            </p>
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+              Projects
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {projectsData.map((project, index) => (
             <FadeIn delay={`delay-${index * 100}ms`} key={project.title}>
-              <Card className="overflow-hidden transition-all hover:shadow-xl flex flex-col h-full bg-card">
+              <Card className="flex h-full flex-col overflow-hidden bg-secondary/40 transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal-accent">
                 {project.image && (
-                  <div className="relative w-full h-48">
+                  <div className="relative h-48 w-full border-b-2 border-foreground">
                     <Image
                       src={project.image}
                       alt={project.title}
@@ -74,21 +81,21 @@ export function ProjectsSection() {
                   </div>
                 )}
                 <CardHeader className="pb-2">
-                  <div className="flex justify-between items-baseline gap-2">
-                    <CardTitle className="text-lg font-serif font-semibold text-primary/90 tracking-tight leading-snug">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <CardTitle className="text-lg font-serif font-semibold tracking-tight leading-snug text-primary">
                       {project.title}
                     </CardTitle>
-                    <time className="text-xs text-muted-foreground whitespace-nowrap tabular-nums">
+                    <time className="whitespace-nowrap font-mono text-xs text-muted-foreground tabular-nums">
                       {project.date}
                     </time>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4 flex-grow pt-1">
-                  <p className="text-foreground/75 text-sm leading-6">
+                <CardContent className="flex-grow space-y-4 pt-1">
+                  <p className="text-sm leading-6 text-foreground/75">
                     {project.description}
                   </p>
                   <div>
-                    <h4 className="font-semibold text-xs uppercase tracking-widest text-foreground/50 mb-2 flex items-center gap-1.5">
+                    <h4 className="mb-2 flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-foreground/60">
                       <Code className="h-3.5 w-3.5 text-accent" />
                       Technologies
                     </h4>
@@ -96,8 +103,8 @@ export function ProjectsSection() {
                       {project.technologies.map((tech) => (
                         <Badge
                           key={tech}
-                          variant="secondary"
-                          className="text-xs bg-primary/10 text-primary hover:bg-primary/20 font-normal"
+                          variant="outline"
+                          className="border-primary text-primary"
                         >
                           {tech}
                         </Badge>
@@ -105,14 +112,9 @@ export function ProjectsSection() {
                     </div>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between items-center pt-4 mt-auto">
+                <CardFooter className="mt-auto flex items-center justify-between pt-4">
                   {project.link && project.link !== "#" && (
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      asChild
-                      className="text-xs shadow-sm hover:shadow-md transition-shadow"
-                    >
+                    <Button variant="outline" size="sm" asChild className="text-xs">
                       <a
                         href={project.link}
                         target="_blank"

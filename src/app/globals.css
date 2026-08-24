@@ -5,73 +5,75 @@
 @layer base {
     :root {
         --font-serif: "Playfair Display";
-        --background: 0 0% 98%; /* #FAFAFA - Very light gray, almost white */
-        --foreground: 0 0% 10%; /* #1A1A1A - Slightly softer dark for text */
-        --card: 0 0% 100%; /* #FFFFFF - White */
-        --card-foreground: 0 0% 10%; /* Consistent with main foreground */
+        /* Light mode — true white/black with teal + coral accents */
+        --background: 0 0% 100%;
+        --foreground: 0 0% 5%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 5%;
         --popover: 0 0% 100%;
-        --popover-foreground: 0 0% 10%;
-        --primary: 180 100% 25%; /* #008080 - Teal */
-        --primary-foreground: 0 0% 100%; /* White Text on Teal */
-        --secondary: 0 0% 94%; /* #F0F0F0 - Light gray for secondary backgrounds */
-        --secondary-foreground: 0 0% 20%; /* #333333 - Darker gray for secondary text */
-        --muted: 0 0% 94%;
-        --muted-foreground: 0 0% 45%; /* #737373 - Medium gray for muted text */
-        --accent: 180 100% 25%; /* #008080 - Teal, Consistent with primary */
-        --accent-foreground: 0 0% 100%; /* Consistent with primary foreground */
-        --destructive: 0 75% 55%; /* A slightly softer red: HSL(0, 75%, 55%) -> #E54B4B */
+        --popover-foreground: 0 0% 5%;
+        --primary: 180 100% 25%; /* Teal */
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 95%;
+        --secondary-foreground: 0 0% 10%;
+        --muted: 0 0% 95%;
+        --muted-foreground: 0 0% 38%;
+        --accent: 16 85% 55%; /* Coral, complements teal */
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 50%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 90%; /* #E6E6E6 - Softer border */
-        --input: 0 0% 90%;
-        --ring: 180 100% 28%; /* Slightly lighter ring for focus, derived from new primary */
-        --chart-1: 12 76% 61%;
-        --chart-2: 173 58% 39%;
-        --chart-3: 197 37% 24%;
-        --chart-4: 43 74% 66%;
-        --chart-5: 27 87% 67%;
-        --radius: 0.5rem;
-        --sidebar-background: 0 0% 97%; /* Slightly off-white */
-        --sidebar-foreground: 0 0% 20%;
-        --sidebar-primary: 180 60% 40%; /* Teal, slightly desaturated from main primary */
+        --border: 0 0% 5%; /* True black rule lines, letterpress feel */
+        --input: 0 0% 78%;
+        --ring: 180 100% 25%;
+        --chart-1: 180 100% 25%;
+        --chart-2: 16 85% 55%;
+        --chart-3: 220 60% 45%;
+        --chart-4: 45 90% 50%;
+        --chart-5: 140 45% 35%;
+        --radius: 0.25rem;
+        --sidebar-background: 0 0% 96%;
+        --sidebar-foreground: 0 0% 10%;
+        --sidebar-primary: 180 100% 25%;
         --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 0 0% 92%;
-        --sidebar-accent-foreground: 0 0% 15%;
-        --sidebar-border: 0 0% 88%;
-        --sidebar-ring: 180 60% 43%;
+        --sidebar-accent: 16 85% 55%;
+        --sidebar-accent-foreground: 0 0% 100%;
+        --sidebar-border: 0 0% 5%;
+        --sidebar-ring: 180 100% 25%;
     }
     .dark {
-        --background: 240 10% 10%; /* Dark Gray */
-        --foreground: 0 0% 95%; /* Light Gray Text */
-        --card: 240 10% 15%; /* Slightly Lighter Dark Gray */
-        --card-foreground: 0 0% 95%;
-        --popover: 240 10% 15%;
-        --popover-foreground: 0 0% 95%;
-        --primary: 180 100% 25%; /* #008080 - Teal */
-        --primary-foreground: 0 0% 100%; /* White Text */
-        --secondary: 240 10% 20%;
-        --secondary-foreground: 0 0% 95%;
-        --muted: 240 10% 20%;
-        --muted-foreground: 0 0% 60%;
-        --accent: 180 100% 25%; /* #008080 - Teal, Consistent with primary */
-        --accent-foreground: 0 0% 100%;
-        --destructive: 0 62.8% 30.6%;
+        /* Dark mode — true near-black/white with teal + coral accents */
+        --background: 0 0% 4%;
+        --foreground: 0 0% 98%;
+        --card: 0 0% 8%;
+        --card-foreground: 0 0% 98%;
+        --popover: 0 0% 7%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 178 80% 45%; /* Bright teal for dark contrast */
+        --primary-foreground: 0 0% 5%;
+        --secondary: 0 0% 14%;
+        --secondary-foreground: 0 0% 92%;
+        --muted: 0 0% 14%;
+        --muted-foreground: 0 0% 62%;
+        --accent: 16 90% 60%; /* Coral, complements teal */
+        --accent-foreground: 0 0% 5%;
+        --destructive: 0 84% 60%;
         --destructive-foreground: 0 0% 98%;
-        --border: 240 10% 25%;
-        --input: 240 10% 25%;
-        --ring: 180 100% 28%; /* Slightly lighter ring for focus, derived from new primary */
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
-        --sidebar-background: 240 5.9% 10%;
-        --sidebar-foreground: 240 4.8% 95.9%;
-        --sidebar-primary: 224.3 76.3% 48%;
-        --sidebar-primary-foreground: 0 0% 100%;
-        --sidebar-accent: 240 3.7% 15.9%;
-        --sidebar-accent-foreground: 240 4.8% 95.9%;
-        --sidebar-border: 240 3.7% 15.9%;
-        --sidebar-ring: 217.2 91.2% 59.8%;
+        --border: 0 0% 88%; /* Near-white rule lines for brutalist edges on black */
+        --input: 0 0% 30%;
+        --ring: 178 80% 45%;
+        --chart-1: 178 80% 45%;
+        --chart-2: 16 90% 60%;
+        --chart-3: 220 70% 60%;
+        --chart-4: 45 90% 58%;
+        --chart-5: 140 50% 48%;
+        --sidebar-background: 0 0% 6%;
+        --sidebar-foreground: 0 0% 92%;
+        --sidebar-primary: 178 80% 45%;
+        --sidebar-primary-foreground: 0 0% 5%;
+        --sidebar-accent: 16 90% 60%;
+        --sidebar-accent-foreground: 0 0% 5%;
+        --sidebar-border: 0 0% 88%;
+        --sidebar-ring: 178 80% 45%;
     }
 }
 
@@ -91,6 +93,16 @@
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        background-image: linear-gradient(
+                hsl(var(--foreground) / 0.05) 1px,
+                transparent 1px
+            ),
+            linear-gradient(
+                90deg,
+                hsl(var(--foreground) / 0.05) 1px,
+                transparent 1px
+            );
+        background-size: 40px 40px;
     }
 
     /* Heading defaults — tight tracking and comfortable leading */
@@ -129,5 +141,38 @@
         font-feature-settings:
             "tnum" 1,
             "lnum" 1;
+    }
+}
+
+@layer utilities {
+    /* Neo-brutalist hard (unblurred) offset shadows */
+    .shadow-brutal {
+        box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+    }
+    .shadow-brutal-sm {
+        box-shadow: 3px 3px 0 0 hsl(var(--foreground));
+    }
+    .shadow-brutal-primary {
+        box-shadow: 6px 6px 0 0 hsl(var(--primary));
+    }
+    .shadow-brutal-accent {
+        box-shadow: 6px 6px 0 0 hsl(var(--accent));
+    }
+    .shadow-brutal-none {
+        box-shadow: 0 0 0 0 hsl(var(--foreground));
+    }
+
+    /* Pressable brutalist interaction: shadow collapses as the element "pushes in" */
+    .press-brutal {
+        transition:
+            transform 150ms ease,
+            box-shadow 150ms ease;
+    }
+    .press-brutal:hover {
+        transform: translate(-2px, -2px);
+    }
+    .press-brutal:active {
+        transform: translate(0, 0);
+        box-shadow: 0 0 0 0 hsl(var(--foreground)) !important;
     }
 }

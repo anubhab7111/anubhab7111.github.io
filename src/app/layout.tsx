@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const geistSans = GeistSans;
+const geistMono = GeistMono;
 
 const siteUrl = "https://anubhab7111.github.io/";
 const profileImageUrl = `${siteUrl}images/anubhab.jpg`; // This will be used for schema.org but not for openGraph/twitter
@@ -124,11 +126,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} font-sans antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
