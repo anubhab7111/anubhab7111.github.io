@@ -13,6 +13,36 @@ import { FadeIn } from "@/components/utility/fade-in";
 
 const projectsData = [
   {
+    title: "LawWeb – AI Legal Assistant Platform for Indian Law",
+    date: "Aug 2026",
+    description:
+      "Architected a hybrid retrieval pipeline combining dense (FAISS) and sparse (BM25) search fused via Reciprocal Rank Fusion with cross-encoder reranking. Orchestrated a LangGraph agentic workflow with low-latency embedding-based intent classifier and engineered a 3-layer document validation pipeline. Designed a hybrid lawyer recommendation engine combining pgvector semantic search with weighted ranking.",
+    technologies: ["FastAPI", "LangGraph", "LangChain", "FAISS", "PostgreSQL", "Ollama"],
+    link: "https://github.com/anubhab7111/LawWeb",
+    image: "/images/lawweb.png",
+    imageHint: "AI legal assistant platform",
+  },
+  {
+    title: "FedQoS – Federated Learning for 5G QoS Prediction",
+    date: "Aug 2025",
+    description:
+      "Improved QoS prediction R2 from 0.31 to 0.96 through advanced feature engineering on 5G V2X time-series data. Developed a federated learning framework using Flower and PyTorch LSTMs, training across 7 distributed clients over 10 communication rounds. Constructed a multi-output inference pipeline with per-client MinMaxScaler serialization and ONNX export.",
+    technologies: ["PyTorch", "Flower (FedAvg)", "LSTM", "FastAPI", "ONNX", "Docker"],
+    link: "https://github.com/anubhab7111/FedQoS",
+    image: "/images/fedqos.png",
+    imageHint: "federated learning 5G",
+  },
+  {
+    title: "Football Analysis",
+    date: "Mar 2025",
+    description:
+      "Achieved 0.981 mAP@50 in player detection by fine-tuning YOLOv5x (97M params, 246 GFLOPs) on football dataset. Classified teams with 0.74 Silhouette Score by engineering HSV color features and applying KMeans clustering. Implemented ByteTrack-based pipeline to track player/ball movement, computing player speed and ball possession.",
+    technologies: ["YOLO", "KMeans Clustering", "Computer Vision", "Python", "OpenCV"],
+    link: "https://github.com/anubhab7111/Football-Analysis",
+    image: "/images/Football-Analysis.png",
+    imageHint: "sports analytics",
+  },
+  {
     title: "Micrograd",
     date: "Dec 2024",
     description:
@@ -21,16 +51,6 @@ const projectsData = [
     link: "https://github.com/anubhab7111/micrograd.git",
     image: "/images/micrograd.png",
     imageHint: "code visualization",
-  },
-  {
-    title: "Football Analysis",
-    date: "Mar 2025",
-    description:
-      "Trained a custom YOLO model to detect and track players, referees, and the football in match footage. Used KMeans clustering for team classification based on jersey colors and analyzed ball possession. Applied optical flow and perspective transformation to track player movement and measure speed.",
-    technologies: ["YOLO", "KMeans Clustering", "Computer Vision", "Python"],
-    link: "https://github.com/anubhab7111/Football-Analysis",
-    image: "/images/Football-Analysis.png",
-    imageHint: "sports analytics",
   },
   {
     title: "CatppuccinRice",

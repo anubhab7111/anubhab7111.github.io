@@ -21,7 +21,7 @@ export function AboutSection() {
           lang="en"
         >
           <p>
-            I am a third-year B.Tech. student in Electronics and Instrumentation
+            I am a final-year B.Tech. student in Electronics and Instrumentation
             Engineering at the National Institute of Technology Rourkela. My
             research interests lie in deep learning, computer vision, and image
             restoration, with a focus on designing efficient and reproducible

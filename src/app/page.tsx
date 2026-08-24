@@ -4,6 +4,7 @@ import { Menu, Linkedin, Github, Mail, Twitter } from "lucide-react";
 import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { CvSection } from "@/components/sections/cv-section";
+import { ExperienceSection } from "@/components/sections/experience-section";
 import { Button } from "@/components/ui/button";
 import { EducationSection } from "@/components/sections/education-section";
 import { ThemeSwitcher } from "@/components/theme-switcher";
@@ -18,6 +19,7 @@ import {
 
 const navItems = [
   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
   { name: "Projects", href: "#projects" },
   { name: "CV", href: "#cv" },
@@ -173,6 +175,16 @@ export default function HomePage() {
         {/* Hero */}
         <section aria-label="Introduction">
           <TerminalHeroSection />
+        </section>
+
+        {/* Experience Section */}
+        <section
+          id="experience"
+          className="scroll-mt-24"
+        >
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+            <ExperienceSection />
+          </div>
         </section>
 
         {/* Bento grid of sections */}
