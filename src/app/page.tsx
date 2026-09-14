@@ -8,7 +8,7 @@ import { PublicationsSection } from "@/components/sections/publications-section"
 import { Button } from "@/components/ui/button";
 import { EducationSection } from "@/components/sections/education-section";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { TerminalHeroSection } from "@/components/sections/terminal-hero-section";
+import { HeroSection } from "@/components/sections/hero-section";
 import {
   Sheet,
   SheetContent,
@@ -174,7 +174,7 @@ export default function HomePage() {
       <main className="container mx-auto max-w-7xl flex-1 space-y-10 px-4 py-10 md:py-14">
         {/* Hero */}
         <section aria-label="Introduction">
-          <TerminalHeroSection />
+          <HeroSection />
         </section>
 
         {/* About & Education Grid */}
