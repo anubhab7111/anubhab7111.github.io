@@ -110,7 +110,7 @@ export function HeroSection() {
         </div>
 
         <p className="accent-bar pl-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Open to research collaborations &amp; internships
+          Open to building, research &amp; collaborations
         </p>
       </div>
     </div>
