@@ -236,7 +236,7 @@ export default function HomePage() {
             </h3>
             <Button asChild size="lg" className="shadow-brutal">
               <a
-                href="https://drive.google.com/file/d/1OHxBxrKI8QgwMwNrKml6WP-0CMBihFaQ/view?usp=sharing"
+                href="https://drive.google.com/file/d/1rx69-8kxY6FolYiHbxKoK-7DSm4S-Ccj/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
