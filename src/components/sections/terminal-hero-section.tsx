@@ -91,7 +91,7 @@ function Terminal() {
         <span className="h-3 w-3 rounded-full border border-foreground bg-chart-4" />
         <span className="h-3 w-3 rounded-full border border-foreground bg-chart-5" />
         <span className="ml-2 font-mono text-xs tracking-wide text-muted-foreground">
-          anubhab@portfolio:~$
+          anubhab@about:~$
         </span>
       </div>
       <div
