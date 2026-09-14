@@ -16,35 +16,43 @@ export function AboutSection() {
           lang="en"
         >
           <p>
-            I am a final-year B.Tech. student in Electronics and Instrumentation
-            Engineering at the National Institute of Technology Rourkela. My
-            research interests lie in deep learning, computer vision, and image
-            restoration, with a focus on designing efficient and reproducible
-            neural models.
+            I am a final-year B.Tech. student in Electronics and
+            Instrumentation Engineering at the National Institute of
+            Technology Rourkela, with a strong interest in artificial
+            intelligence, deep learning, and building practical software
+            systems.
           </p>
           <p>
-            At NIT Rourkela, I am currently working on underwater image
-            enhancement, exploring deep learning–based restoration techniques
-            for degraded visual data captured in challenging aquatic
-            environments. I am particularly interested in bridging the gap
-            between theoretical advances and deployable, resource-efficient
-            systems for real-world visual understanding.
+            I enjoy working at the intersection of{" "}
+            <strong className="font-semibold text-foreground">
+              AI research and product development
+            </strong>
+            —taking ideas from papers and prototypes to reliable, usable
+            systems. My work spans deep learning, computer vision,
+            information retrieval, and backend engineering, with experience
+            building AI-powered applications, optimizing ML pipelines, and
+            developing production-oriented infrastructure.
           </p>
           <p>
-            Beyond research, I enjoy implementing and experimenting with deep
-            learning systems—from building lightweight autograd engines to
-            training and optimizing neural architectures. A central aspect of my
-            development philosophy is computational minimalism—achieving strong
-            performance with lean, well-engineered code. I primarily work on
-            Arch Linux, maintaining a custom, minimal setup using Hyprland,
-            optimized for efficient experimentation and clean research
-            workflows.
+            I am particularly interested in working with{" "}
+            <strong className="font-semibold text-foreground">
+              early-stage startups and product-focused teams
+            </strong>
+            , where I can contribute across the stack, solve ambiguous
+            technical problems, and turn ideas into working products. I value
+            engineering simplicity, rapid experimentation, and building
+            systems that are efficient enough to work beyond the lab.
           </p>
           <p>
-            In the long term, I aim to pursue research that advances the
-            intersection of efficient visual learning and practical AI
-            deployment, contributing to systems that are both scientifically
-            grounded and computationally accessible.
+            Alongside product development, I remain actively interested in{" "}
+            <strong className="font-semibold text-foreground">
+              research opportunities
+            </strong>{" "}
+            in efficient deep learning, computer vision, and image
+            restoration. My long-term goal is to work on AI systems that
+            combine strong technical foundations with real-world impact—
+            whether through research, products, or the space where the two
+            meet.
           </p>
         </div>
       </div>
