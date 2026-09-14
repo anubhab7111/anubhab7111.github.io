@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { Github, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react";
+import {
+  Github,
+  IdCard,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+} from "lucide-react";
 
 const contactLinks = [
   {
@@ -56,11 +64,11 @@ export function HeroSection() {
 
       {/* Editorial masthead */}
       <div className="flex flex-col justify-center gap-6 rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-primary sm:p-8">
-        <div className="space-y-2">
-          <p className="section-number">
-            01 <span className="label-editorial ml-2">/ Introduction</span>
-          </p>
-          <div className="rule-brass w-16" />
+        <div className="flex items-center gap-3">
+          <IdCard className="h-7 w-7 flex-shrink-0 text-accent" />
+          <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
+            Introduction
+          </h2>
         </div>
 
         <div className="space-y-1.5">
