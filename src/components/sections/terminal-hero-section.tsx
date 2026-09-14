@@ -91,7 +91,7 @@ function Terminal() {
         <span className="h-3 w-3 rounded-full border border-foreground bg-chart-4" />
         <span className="h-3 w-3 rounded-full border border-foreground bg-chart-5" />
         <span className="ml-2 font-mono text-xs tracking-wide text-muted-foreground">
-          anubhab@nitr:~$
+          anubhab@portfolio:~$
         </span>
       </div>
       <div
@@ -124,9 +124,6 @@ function Terminal() {
               showCursor && <span className="ml-0.5 inline-block h-4 w-2 animate-pulse bg-primary" />}
           </div>
         ))}
-        {currentLineIndex >= linesData.length && showCursor && (
-          <span className="ml-0.5 inline-block h-4 w-2 animate-pulse bg-primary" />
-        )}
       </div>
     </div>
   );

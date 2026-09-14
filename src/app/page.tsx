@@ -4,6 +4,7 @@ import { Menu, Linkedin, Github, Mail, Twitter, Download } from "lucide-react";
 import { AboutSection } from "@/components/sections/about-section";
 import { ProjectsSection } from "@/components/sections/projects-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
+import { PublicationsSection } from "@/components/sections/publications-section";
 import { Button } from "@/components/ui/button";
 import { EducationSection } from "@/components/sections/education-section";
 import { ThemeSwitcher } from "@/components/theme-switcher";
@@ -20,6 +21,7 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Education", href: "#education" },
   { name: "Experience", href: "#experience" },
+  { name: "Publications", href: "#publications" },
   { name: "Projects", href: "#projects" },
 ];
 
@@ -36,7 +38,7 @@ export default function HomePage() {
               AD
             </span>
             <span className="hidden font-mono text-sm font-bold uppercase tracking-widest text-foreground sm:inline">
-              anubhab.das
+              Anubhab Das
             </span>
           </Link>
 
@@ -203,6 +205,16 @@ export default function HomePage() {
         >
           <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
             <ExperienceSection />
+          </div>
+        </section>
+
+        {/* Publications Section */}
+        <section
+          id="publications"
+          className="scroll-mt-24"
+        >
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
+            <PublicationsSection />
           </div>
         </section>
 
