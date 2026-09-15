@@ -179,19 +179,13 @@ export default function HomePage() {
 
         {/* About & Education Grid */}
         <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2">
-          <section
-            id="about"
-            className="scroll-mt-24"
-          >
+          <section id="about" className="scroll-mt-24">
             <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
               <AboutSection />
             </div>
           </section>
 
-          <section
-            id="education"
-            className="scroll-mt-24"
-          >
+          <section id="education" className="scroll-mt-24">
             <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
               <EducationSection />
             </div>
@@ -199,30 +193,21 @@ export default function HomePage() {
         </div>
 
         {/* Experience Section */}
-        <section
-          id="experience"
-          className="scroll-mt-24"
-        >
+        <section id="experience" className="scroll-mt-24">
           <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
             <ExperienceSection />
           </div>
         </section>
 
         {/* Publications Section */}
-        <section
-          id="publications"
-          className="scroll-mt-24"
-        >
+        <section id="publications" className="scroll-mt-24">
           <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
             <PublicationsSection />
           </div>
         </section>
 
         {/* Projects Section */}
-        <section
-          id="projects"
-          className="scroll-mt-24"
-        >
+        <section id="projects" className="scroll-mt-24">
           <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
             <ProjectsSection />
           </div>
@@ -236,7 +221,7 @@ export default function HomePage() {
             </h3>
             <Button asChild size="lg" className="shadow-brutal">
               <a
-                href="https://drive.google.com/file/d/1rx69-8kxY6FolYiHbxKoK-7DSm4S-Ccj/view?usp=sharing"
+                href="https://drive.google.com/file/d/1ldzYMeo4O5g4JB513yg_afPZTvy7OgX_/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
