@@ -12,6 +12,7 @@ const publicationsData = [
   {
     title:
       "FAR-Net: Frequency-Based Attention Refinement Framework for Underwater Image Enhancement",
+    authors: ["Arka Bairagi", "Anubhab Das", "Samit Ari", "Sobhan Kanti Dhara"],
     venue: "IEEE InGARSS 2026",
     status: "Accepted for Presentation",
   },
@@ -37,6 +38,14 @@ export function PublicationsSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 pt-0">
+                  <p className="text-sm text-foreground">
+                    {publication.authors.map((author, authorIndex) => (
+                      <span key={author}>
+                        {author === "Anubhab Das" ? <strong>{author}</strong> : author}
+                        {authorIndex < publication.authors.length - 1 ? ", " : ""}
+                      </span>
+                    ))}
+                  </p>
                   <div className="flex flex-wrap items-center gap-2">
                     <Badge
                       variant="outline"
