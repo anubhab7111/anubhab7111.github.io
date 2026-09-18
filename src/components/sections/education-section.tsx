@@ -55,10 +55,10 @@ export function EducationSection() {
             <FadeIn delay={`delay-${index * 100}`} key={edu.institution}>
               <Card className="overflow-hidden bg-secondary/40 shadow-brutal-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg font-serif font-semibold tracking-tight leading-snug text-primary">
+                  <CardTitle className="font-serif text-lg font-semibold leading-snug text-primary">
                     {edu.institution}
                   </CardTitle>
-                  <CardDescription className="mt-0.5 text-sm font-medium text-foreground/70">
+                  <CardDescription className="mt-1 text-sm leading-6 font-medium text-foreground/70">
                     {edu.degree}
                   </CardDescription>
                 </CardHeader>

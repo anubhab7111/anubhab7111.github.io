@@ -40,10 +40,10 @@ export function ExperienceSection() {
                 <CardHeader className="pb-3">
                   <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
                     <div>
-                      <CardTitle className="text-lg font-serif font-semibold tracking-tight text-primary">
+                      <CardTitle className="font-serif text-lg font-semibold leading-snug text-primary">
                         {experience.title}
                       </CardTitle>
-                      <p className="mt-1 font-mono text-sm font-medium text-foreground">
+                      <p className="mt-1.5 font-mono text-sm font-medium text-foreground">
                         {experience.company}
                       </p>
                     </div>

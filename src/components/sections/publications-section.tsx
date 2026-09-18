@@ -33,7 +33,7 @@ export function PublicationsSection() {
             <FadeIn delay={`delay-${index * 100}ms`} key={publication.title}>
               <Card className="bg-secondary/40 border-2 border-foreground transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal-accent">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg font-serif font-semibold leading-snug tracking-tight text-primary">
+                  <CardTitle className="font-serif text-lg font-semibold leading-snug text-primary">
                     {publication.title}
                   </CardTitle>
                 </CardHeader>

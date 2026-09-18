@@ -106,12 +106,12 @@ export function ProjectsSection() {
                     />
                   </div>
                 )}
-                <CardHeader className="pb-2">
-                  <div className="flex items-baseline justify-between gap-2">
-                    <CardTitle className="text-lg font-serif font-semibold tracking-tight leading-snug text-primary">
+                <CardHeader className="pb-3">
+                  <div className="space-y-1.5">
+                    <CardTitle className="font-serif text-lg font-semibold leading-snug text-primary">
                       {project.title}
                     </CardTitle>
-                    <time className="whitespace-nowrap font-mono text-xs text-muted-foreground tabular-nums">
+                    <time className="block font-mono text-xs text-muted-foreground tabular-nums">
                       {project.date}
                     </time>
                   </div>
