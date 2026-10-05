@@ -1,4 +1,4 @@
-import { BookMarked } from "lucide-react";
+import { BookMarked, FlaskConical } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -7,6 +7,13 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FadeIn } from "@/components/utility/fade-in";
+
+const researchGroups = [
+  {
+    name: "PRISM, NIT Rourkela",
+    topic: "Underwater image enhancement",
+  },
+];
 
 const publicationsData = [
   {
@@ -23,12 +30,40 @@ export function PublicationsSection() {
     <FadeIn>
       <div className="space-y-8">
         <div className="mb-8 flex items-center gap-3">
-          <BookMarked className="h-7 w-7 flex-shrink-0 text-accent" />
+          <FlaskConical className="h-7 w-7 flex-shrink-0 text-accent" />
           <h2 className="font-serif text-3xl font-bold tracking-tight text-foreground">
-            Publications
+            Research
           </h2>
         </div>
+
+        <div className="space-y-4">
+          <p className="max-w-prose text-base leading-7 text-foreground/80">
+            My research interests are efficient deep learning, computer
+            vision, and image restoration.
+          </p>
+          <ul className="space-y-1.5">
+            {researchGroups.map((group) => (
+              <li
+                key={group.name}
+                className="flex gap-2 text-sm leading-6 text-foreground/75"
+              >
+                <span className="mt-0.5 flex-shrink-0 text-accent">▸</span>
+                <span>
+                  <strong className="font-semibold text-foreground">
+                    {group.name}
+                  </strong>{" "}
+                  — {group.topic}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
         <div className="space-y-5">
+          <h3 className="flex items-center gap-1.5 font-mono text-xs font-bold uppercase tracking-widest text-foreground/60">
+            <BookMarked className="h-3.5 w-3.5 text-accent" />
+            Publications
+          </h3>
           {publicationsData.map((publication, index) => (
             <FadeIn delay={`delay-${index * 100}ms`} key={publication.title}>
               <Card className="bg-secondary/40 border-2 border-foreground transition-all hover:-translate-x-1 hover:-translate-y-1 hover:shadow-brutal-accent">

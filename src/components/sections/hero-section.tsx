@@ -1,13 +1,18 @@
 import Image from "next/image";
 import {
+  ExternalLink,
+  FileText,
   Github,
   IdCard,
   Linkedin,
   Mail,
   MapPin,
-  Phone,
   Twitter,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export const RESUME_URL =
+  "https://drive.google.com/file/d/1ldzYMeo4O5g4JB513yg_afPZTvy7OgX_/view?usp=sharing";
 
 const contactLinks = [
   {
@@ -19,19 +24,9 @@ const contactLinks = [
     href: "mailto:anubhabdas7111@gmail.com",
     Icon: Mail,
   },
-  {
-    label: "(+91) 9937244767",
-    href: "tel:+919937244767",
-    Icon: Phone,
-  },
 ];
 
 const socialLinks = [
-  {
-    label: "GitHub",
-    href: "https://github.com/anubhab7111",
-    Icon: Github,
-  },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/anubhab-das-498155287/",
@@ -41,6 +36,24 @@ const socialLinks = [
     label: "Twitter",
     href: "https://x.com/forreal_anubhab",
     Icon: Twitter,
+  },
+];
+
+const primaryActions = [
+  {
+    label: "LawWeb",
+    href: "https://github.com/anubhab7111/LawWeb",
+    Icon: ExternalLink,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/anubhab7111",
+    Icon: Github,
+  },
+  {
+    label: "Resume",
+    href: RESUME_URL,
+    Icon: FileText,
   },
 ];
 
@@ -76,11 +89,28 @@ export function HeroSection() {
             Anubhab Das
           </h1>
           <p className="font-mono text-sm uppercase tracking-widest text-muted-foreground">
-            AI Researcher &amp; Software Engineer
+            AI Engineer building RAG and LLM systems
           </p>
         </div>
 
         <div className="rule-brass" />
+
+        <div className="flex flex-wrap gap-3">
+          {primaryActions.map(({ label, href, Icon }) => (
+            <Button
+              key={label}
+              asChild
+              size="sm"
+              variant={label === "LawWeb" ? "default" : "outline"}
+              className="font-mono shadow-brutal-sm"
+            >
+              <a href={href} target="_blank" rel="noopener noreferrer">
+                <Icon className="mr-1.5 h-4 w-4" />
+                {label}
+              </a>
+            </Button>
+          ))}
+        </div>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-sm text-foreground/80">
           {contactLinks.map(({ label, href, Icon }) =>
@@ -100,9 +130,6 @@ export function HeroSection() {
               </span>
             ),
           )}
-        </div>
-
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-sm text-foreground/80">
           {socialLinks.map(({ label, href, Icon }) => (
             <a
               key={label}
@@ -117,8 +144,9 @@ export function HeroSection() {
           ))}
         </div>
 
-        <p className="accent-bar pl-3 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Open to building, research &amp; collaborations
+        <p className="accent-bar pl-3 font-mono text-xs uppercase leading-6 tracking-widest text-muted-foreground">
+          Final-year at NIT Rourkela (graduating May 2027) · Open to remote
+          roles at early-stage startups
         </p>
       </div>
     </div>

@@ -12,40 +12,42 @@ const geistMono = GeistMono;
 const siteUrl = "https://anubhab7111.github.io/";
 const profileImageUrl = `${siteUrl}images/anubhab.jpg`; // This will be used for schema.org but not for openGraph/twitter
 
+const siteTitle = "Anubhab Das – AI Engineer, RAG & LLM Systems";
+const siteDescription =
+  "AI engineer building RAG and LLM systems: LawWeb (legal RAG for Indian law), a Snowflake gateway at Bank of New York, and a paper at IEEE InGARSS 2026.";
+
 export const metadata: Metadata = {
-  title: "Anubhab Das",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   keywords: [
     "Anubhab Das",
-    "Portfolio",
-    "Deep Learning",
-    "Computer Vision",
+    "AI Engineer",
+    "RAG",
+    "LLM",
+    "Retrieval-Augmented Generation",
+    "LangGraph",
+    "FastAPI",
     "Machine Learning",
-    "AI",
-    "Artificial Intelligence",
-    "Researcher",
-    "Undergraduate",
+    "Computer Vision",
     "NIT Rourkela",
-    "Python",
-    "PyTorch",
-    "Next.js Developer",
-    "Software Developer",
-    "Tech Portfolio",
-    "Personal Showcase",
   ],
   authors: [{ name: "Anubhab Das", url: siteUrl }],
   creator: "Anubhab Das",
   publisher: "Anubhab Das",
 
   openGraph: {
-    title: "Anubhab Das",
+    title: siteTitle,
+    description: siteDescription,
     url: siteUrl,
     siteName: "Anubhab Das",
     locale: "en_US",
     type: "website",
   },
   twitter: {
-    card: "summary",
-    title: "Anubhab Das",
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
     creator: "@forreal_anubhab",
   },
   robots: {
@@ -64,9 +66,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
   manifest: "/manifest.json",
 };
 
@@ -81,11 +80,8 @@ export default function RootLayout({
     name: "Anubhab Das",
     url: siteUrl,
     image: profileImageUrl, // Schema.org can still use an image if desired
-    jobTitle: "Student at NIT Rourkela",
-    worksFor: {
-      "@type": "Organization",
-      name: "National Institute of Technology, Rourkela",
-    },
+    jobTitle: "AI Engineer",
+    description: siteDescription,
     alumniOf: {
       "@type": "CollegeOrUniversity",
       name: "National Institute of Technology, Rourkela",
@@ -96,14 +92,14 @@ export default function RootLayout({
       "https://x.com/forreal_anubhab",
     ],
     knowsAbout: [
+      "Retrieval-Augmented Generation",
+      "Large Language Models",
+      "Information Retrieval",
+      "Backend Engineering",
       "Deep Learning",
       "Computer Vision",
-      "Machine Learning",
-      "Artificial Intelligence",
       "Python",
       "PyTorch",
-      "Next.js",
-      "Web Development",
     ],
   };
 
