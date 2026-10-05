@@ -15,11 +15,11 @@ const experienceData = [
     location: "Pune, India",
     duration: "May 2026 – Jul 2026",
     highlights: [
-      "Implemented a production-grade FastAPI-based Snowflake Database Gateway, replacing direct database connectivity with secure REST APIs and implementing response streaming, JWT authentication, SQL validation and connection pooling.",
-      "Engineered and benchmarked five query endpoint versions using Apache Arrow, Polars, orjson, streaming responses, and concurrent execution, reducing query latency by 49% and response payload size by 49% while improving scalability.",
-      "Deployed a data ingestion monitoring platform tracking 2,100+ Snowflake tables across 23 schemas, featuring automated schema discovery, asynchronous query execution and containerized deployment using Docker, Uvicorn, and GitLab CI/CD.",
+      "Built a production FastAPI gateway over Snowflake serving Power BI and downstream apps, with JWT authentication, sqlglot-based SQL validation, connection pooling, streamed responses and bounded-concurrency request queuing.",
+      "Benchmarked five endpoint designs (Apache Arrow, GIL-free Polars, columnar JSON) on 500K rows, cutting query latency by 49% and response payload by 49%, with sustained gains of about 20% at 20 concurrent users.",
+      "Built a real-time ingestion monitoring platform tracking 2,100+ tables across 23 schemas, with schema auto-discovery, asyncio-parallel queries, TTL caching and Docker and GitLab CI/CD deployment.",
     ],
-    technologies: ["FastAPI", "Snowflake", "PostgreSQL", "Docker", "JWT", "Apache Arrow", "Polars"],
+    technologies: ["FastAPI", "Snowflake", "Apache Arrow", "Polars", "sqlglot", "PostgreSQL", "JWT", "Docker", "GitLab CI/CD"],
   },
 ];
 

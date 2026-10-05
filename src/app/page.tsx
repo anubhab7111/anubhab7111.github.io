@@ -7,8 +7,10 @@ import { ExperienceSection } from "@/components/sections/experience-section";
 import { PublicationsSection } from "@/components/sections/publications-section";
 import { Button } from "@/components/ui/button";
 import { EducationSection } from "@/components/sections/education-section";
+import { SkillsSection } from "@/components/sections/skills-section";
+import { AchievementsSection } from "@/components/sections/achievements-section";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { HeroSection } from "@/components/sections/hero-section";
+import { HeroSection, RESUME_URL } from "@/components/sections/hero-section";
 import {
   Sheet,
   SheetContent,
@@ -21,8 +23,10 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Education", href: "#education" },
   { name: "Experience", href: "#experience" },
-  { name: "Publications", href: "#publications" },
   { name: "Projects", href: "#projects" },
+  { name: "Skills", href: "#skills" },
+  { name: "Research", href: "#research" },
+  { name: "Awards", href: "#awards" },
 ];
 
 export default function HomePage() {
@@ -79,7 +83,7 @@ export default function HomePage() {
                       Anubhab Das
                     </SheetTitle>
                     <p className="text-left text-xs text-muted-foreground">
-                      Student at NIT Rourkela
+                      AI Engineer · RAG and LLM systems
                     </p>
                   </SheetHeader>
                   <nav className="flex flex-col space-y-2">
@@ -199,13 +203,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Publications Section */}
-        <section id="publications" className="scroll-mt-24">
-          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
-            <PublicationsSection />
-          </div>
-        </section>
-
         {/* Projects Section */}
         <section id="projects" className="scroll-mt-24">
           <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
@@ -213,15 +210,36 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Skills Section */}
+        <section id="skills" className="scroll-mt-24">
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
+            <SkillsSection />
+          </div>
+        </section>
+
+        {/* Research Section */}
+        <section id="research" className="scroll-mt-24">
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+            <PublicationsSection />
+          </div>
+        </section>
+
+        {/* Awards Section */}
+        <section id="awards" className="scroll-mt-24">
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
+            <AchievementsSection />
+          </div>
+        </section>
+
         {/* CV Download Button */}
-        <section className="scroll-mt-24">
+        <section id="cv" className="scroll-mt-24">
           <div className="flex flex-col items-start gap-4 rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
             <h3 className="font-serif text-xl font-bold tracking-tight text-foreground">
               Download my CV
             </h3>
             <Button asChild size="lg" className="shadow-brutal">
               <a
-                href="https://drive.google.com/file/d/1ldzYMeo4O5g4JB513yg_afPZTvy7OgX_/view?usp=sharing"
+                href={RESUME_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >

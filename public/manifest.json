@@ -1,12 +1,11 @@
-
 {
-  "name": "Anubhab Das - Portfolio",
+  "name": "Anubhab Das – AI Engineer",
   "short_name": "Anubhab Das",
-  "description": "Personal portfolio of Anubhab Das, Deep Learning Enthusiast.",
+  "description": "Portfolio of Anubhab Das, an AI engineer building RAG and LLM systems.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#008080",
+  "background_color": "#0a0a0a",
+  "theme_color": "#17cec7",
   "icons": [
     {
       "src": "/images/anubhab_icon_192.png",

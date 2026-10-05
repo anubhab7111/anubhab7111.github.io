@@ -16,43 +16,25 @@ export function AboutSection() {
           lang="en"
         >
           <p>
-            I am a final-year B.Tech. student in Electronics and
-            Instrumentation Engineering at the National Institute of
-            Technology Rourkela, with a strong interest in artificial
-            intelligence, deep learning, and building practical software
-            systems.
-          </p>
-          <p>
-            I enjoy working at the intersection of{" "}
+            I build AI systems that work in production. At BNY I built a
+            Snowflake data gateway that{" "}
             <strong className="font-semibold text-foreground">
-              AI research and product development
+              cut query latency by 49%
             </strong>
-            —taking ideas from papers and prototypes to reliable, usable
-            systems. My work spans deep learning, computer vision,
-            information retrieval, and backend engineering, with experience
-            building AI-powered applications, optimizing ML pipelines, and
-            developing production-oriented infrastructure.
+            , and I built{" "}
+            <strong className="font-semibold text-foreground">LawWeb</strong>,
+            a citation-verified legal assistant for Indian law, as a solo
+            project. I also do computer vision research, with a paper
+            accepted at IEEE InGARSS 2026.
           </p>
           <p>
-            I am particularly interested in working with{" "}
+            I am looking for an{" "}
             <strong className="font-semibold text-foreground">
-              early-stage startups and product-focused teams
-            </strong>
-            , where I can contribute across the stack, solve ambiguous
-            technical problems, and turn ideas into working products. I value
-            engineering simplicity, rapid experimentation, and building
-            systems that are efficient enough to work beyond the lab.
-          </p>
-          <p>
-            Alongside product development, I remain actively interested in{" "}
-            <strong className="font-semibold text-foreground">
-              research opportunities
+              early-stage team
             </strong>{" "}
-            in efficient deep learning, computer vision, and image
-            restoration. My long-term goal is to work on AI systems that
-            combine strong technical foundations with real-world impact—
-            whether through research, products, or the space where the two
-            meet.
+            where I can own retrieval, backend and evaluation work end to
+            end. I like measuring what I ship, and I want to work on problems
+            where the answer has to be right, not just plausible.
           </p>
         </div>
       </div>
