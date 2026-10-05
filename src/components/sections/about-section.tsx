@@ -16,7 +16,7 @@ export function AboutSection() {
           lang="en"
         >
           <p>
-            I build AI systems that work in production. At BNY I built a
+            I build AI systems that work in production. At Bank of New York I built a
             Snowflake data gateway that{" "}
             <strong className="font-semibold text-foreground">
               cut query latency by 49%

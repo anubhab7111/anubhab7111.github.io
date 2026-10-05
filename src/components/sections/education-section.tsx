@@ -17,6 +17,7 @@ const educationData = [
     duration: "September 2023 – Present (Expected: 2027)",
     location: "Rourkela, Odisha",
     details: [
+      "CGPA — 7.5",
       "Relevant Coursework:",
       "Probability and Statistics (MA2001)",
       "Introduction to AI and ML (CS2011)",
@@ -29,7 +30,7 @@ const educationData = [
     degree: "AISSCE – CBSE, Science (PCM)",
     duration: "May 2023",
     location: "Bhubaneswar, Odisha",
-    details: ["Percentage — 94%"],
+    details: ["Percentage — 93.6%"],
   },
   {
     institution: "Delhi Public School, Kalinga",

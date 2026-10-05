@@ -14,7 +14,7 @@ const profileImageUrl = `${siteUrl}images/anubhab.jpg`; // This will be used for
 
 const siteTitle = "Anubhab Das – AI Engineer, RAG & LLM Systems";
 const siteDescription =
-  "AI engineer building RAG and LLM systems: LawWeb (legal RAG for Indian law), a Snowflake gateway at BNY, and a paper at IEEE InGARSS 2026.";
+  "AI engineer building RAG and LLM systems: LawWeb (legal RAG for Indian law), a Snowflake gateway at Bank of New York, and a paper at IEEE InGARSS 2026.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

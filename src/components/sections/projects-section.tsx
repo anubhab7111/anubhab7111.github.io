@@ -25,7 +25,7 @@ type Project = {
 const projectsData: Project[] = [
   {
     title: "LawWeb – Citation-Verified Legal Assistant for Indian Law",
-    date: "Aug 2026",
+    date: "Mar 2026",
     description: [
       "Built solo to run locally on a 4 GB-VRAM laptop and to answer in Indian languages. Hybrid retrieval (BM25 plus BGE-M3 dense search, then cross-encoder reranking) over about 12.9K chunks from 40+ statutes (\"bare acts\", the official statute texts).",
       "A regex citation verifier catches right-number-wrong-Act errors without an LLM call, and a sentence-level grounding gate flags dropped exceptions and reversed conditions. A LangGraph intent router, a multilingual layer (fastText and IndicTrans2, 23 languages) that masks citations before translation so they are not garbled, and a pgvector lawyer-recommendation engine.",
