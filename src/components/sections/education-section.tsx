@@ -51,10 +51,15 @@ export function EducationSection() {
             Education
           </h2>
         </div>
-        <div className="space-y-5">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {educationData.map((edu, index) => (
-            <FadeIn delay={`delay-${index * 100}`} key={edu.institution}>
-              <Card className="overflow-hidden bg-secondary/40 shadow-brutal-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal">
+            <FadeIn
+              delay={`delay-${index * 100}`}
+              key={edu.institution}
+              // The university spans both rows; the schools stack beside it.
+              className={index === 0 ? "md:row-span-2" : undefined}
+            >
+              <Card className="h-full overflow-hidden bg-secondary/40 shadow-brutal-sm transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal">
                 <CardHeader className="pb-3">
                   <CardTitle className="font-serif text-lg font-semibold leading-snug text-primary">
                     {edu.institution}

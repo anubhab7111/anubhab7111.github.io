@@ -181,20 +181,19 @@ export default function HomePage() {
           <HeroSection />
         </section>
 
-        {/* About & Education Grid */}
-        <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2">
-          <section id="about" className="scroll-mt-24">
-            <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
-              <AboutSection />
-            </div>
-          </section>
+        {/* About Section */}
+        <section id="about" className="scroll-mt-24">
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal sm:p-8">
+            <AboutSection />
+          </div>
+        </section>
 
-          <section id="education" className="scroll-mt-24">
-            <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
-              <EducationSection />
-            </div>
-          </section>
-        </div>
+        {/* Education Section */}
+        <section id="education" className="scroll-mt-24">
+          <div className="rounded-md border-2 border-foreground bg-card p-6 shadow-brutal-accent sm:p-8">
+            <EducationSection />
+          </div>
+        </section>
 
         {/* Experience Section */}
         <section id="experience" className="scroll-mt-24">
