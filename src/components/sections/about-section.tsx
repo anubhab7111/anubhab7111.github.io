@@ -12,7 +12,7 @@ export function AboutSection() {
           </h2>
         </div>
         <div
-          className="space-y-5 text-foreground/80 leading-7 text-base max-w-prose text-justify hyphens-auto"
+          className="grid gap-5 text-base leading-7 text-foreground/80 md:grid-cols-2 md:gap-10"
           lang="en"
         >
           <p>
